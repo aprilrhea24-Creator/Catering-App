@@ -81,7 +81,7 @@ export default async function AdminPage() {
                   {booking.user.name} · {booking.mealPlan?.name ?? booking.cateringMenu?.title ?? booking.chefService?.title}
                 </p>
                 <p className="mt-1 text-sm text-ink/70">
-                  {new Date(booking.startAt).toLocaleString()} · {booking.status} · {formatCurrency(booking.totalPrice)}
+                  {new Date(booking.startAt).toLocaleString()} · {booking.status} · {formatCurrency(Number(booking.totalPrice))}
                 </p>
               </div>
             ))}
